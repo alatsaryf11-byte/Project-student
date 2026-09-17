@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSI Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <div>
+                <span class="badge">HSI BOARDING SCHOOL • WEB PROGRAMMING</span>
+                <h1>🎓 HSI Student Management</h1>
+                <p>Kelola data siswa dengan JavaScript, DOM, dan LocalStorage.</p>
+            </div>
+            <div class="phase-badge">Phase 4<br>Dynamic UI + Storage</div>
+        </header>
+
+        <div id="alertMessage" class="alert" role="status" aria-live="polite"></div>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span class="stat-icon">👥</span>
+                <div>
+                    <p>Total Siswa</p>
+                    <strong id="totalStudents">0</strong>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">📊</span>
+                <div>
+                    <p>Rata-rata Nilai</p>
+                    <strong id="averageScore">0</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid">
+            <div class="card form-card">
+                <div class="card-heading">
+                    <div>
+                        <span class="eyebrow">FORM</span>
+                        <h2 id="formTitle">Tambah Siswa</h2>
+                    </div>
+                    <span class="heading-icon">✏️</span>
+                </div>
+
+                <form id="studentForm">
+                    <label for="studentName">Nama Siswa</label>
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Contoh: Ahmad"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <label for="studentScore">Nilai</label>
+                    <input
+                        type="number"
+                        id="studentScore"
+                        placeholder="0 - 100"
+                        min="0"
+                        max="100"
+                        required
+                    >
+
+                    <div class="form-actions">
+                        <button type="submit" id="submitButton" class="btn primary">
+                            ➕ Tambah Siswa
+                        </button>
+                        <button type="button" id="cancelEditButton" class="btn secondary hidden">
+                            ✖ Batal Edit
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card list-card">
+                <div class="card-heading list-heading">
+                    <div>
+                        <span class="eyebrow">DATA</span>
+                        <h2>Daftar Siswa</h2>
+                    </div>
+                    <span class="heading-icon">📋</span>
+                </div>
+
+                <div class="search-wrap">
+                    <input
+                        type="search"
+                        id="searchStudent"
+                        placeholder="🔍 Cari nama siswa..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div id="studentList" class="student-list"></div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Phase 4 — Dynamic UI + LocalStorage</p>
+            <p>HSI Boarding School • Vanilla JavaScript</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
