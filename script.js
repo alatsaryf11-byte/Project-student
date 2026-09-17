@@ -1,3 +1,6 @@
+console.log('==========================');
+console.log('HSI STUDENT MANAGEMENT');
+console.log('==========================');
 const STORAGE_KEY = "students";
 
 // Ambil data dari LocalStorage.
